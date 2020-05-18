@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 1
+      max-parallel: 4
       matrix:
         python-version: [3.7, 3.8]
 
@@ -28,7 +28,7 @@ jobs:
           pip install pylint
       - name: Check python code quality
         run: |
-          pylint --ignore=manage.py
+          pylint -d C0116
           pylint **/*.py
       - name: Run Tests
         run: |
