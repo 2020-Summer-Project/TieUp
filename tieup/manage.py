@@ -3,6 +3,8 @@
 import os
 import sys
 
+""" Main function for the application """
+
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tieup.settings')
