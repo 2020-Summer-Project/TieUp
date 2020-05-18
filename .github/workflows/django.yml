@@ -28,8 +28,10 @@ jobs:
           pip install pylint
       - name: Check python code quality
         run: |
+          cd tieup
           pylint --ignore=manage.py
           pylint **/*.py
       - name: Run Tests
         run: |
+          cd tieup
           python manage.py test
