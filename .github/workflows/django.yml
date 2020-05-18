@@ -30,4 +30,5 @@ jobs:
         run: pylint --ignore=manage.py **/*.py
       - name: Run Tests
         run: |
+          cd tieup
           python manage.py test
