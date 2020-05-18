@@ -28,7 +28,7 @@ jobs:
           pip install pylint
       - name: Check python code quality
         run: |
-          pylint --disable=C0116
+          pylint --ignore=manage.py
           pylint **/*.py
       - name: Run Tests
         run: |
