@@ -27,8 +27,9 @@ jobs:
           pip install -r requirements.txt
           pip install pylint
       - name: Check python code quality
-        run: pylint --disable=C0116, C0415
-        run: pylint **/*.py
+        run: |
+          pylint --disable=C0116, C0415
+          pylint **/*.py
       - name: Run Tests
         run: |
           python manage.py test
