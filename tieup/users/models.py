@@ -13,4 +13,4 @@ class Users(models.Model):
     last_login = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.first_name + " " + self.last_name + " last login in at " + self.last_login
+        return self.first_name + " " + self.last_name + " last login in at " + self.last_login.strftime("%b %d %Y %H:%M:%S")
