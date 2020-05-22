@@ -76,8 +76,16 @@ WSGI_APPLICATION = 'tieup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        # POSTGRESQL DATABASE
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jipsszbf',
+        'USER': 'jipsszbf',
+        'PASSWORD': 'ZINDww4VCHc9ZBq_MCka_NyFrojJncEP',
+        'HOST': 'rosie.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
